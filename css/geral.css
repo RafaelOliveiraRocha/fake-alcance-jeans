@@ -1,0 +1,281 @@
+body, section, nav, header, p, h1, h2, h3, ul, li, a {
+    margin: 0px;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+
+ul, li, a {
+    list-style: none;
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* PROMO-MENU */
+
+.promo-menu-bg {
+    background: violet;
+    text-align: center;
+    font-size: 1.1rem;
+    height: 50px;
+    width: 100%;
+}
+
+.promo-menu nav p {
+    padding-top: 15px;
+}
+
+.promo-menu p a {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.promo-menu ul {
+    display: flex;
+    position: relative;
+    justify-content: right;
+    margin-right: 60px;
+    margin-top: -20px;
+}
+
+.promo-menu nav ul li a {
+    padding: 10px;
+    text-align: right;
+}
+
+.promo-menu nav ul li a:hover {
+    color: white;
+}
+
+/* MENU */
+
+.menu-bg {
+    background: whitesmoke;
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul {
+    display: flex;
+    margin-left: 60px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.menu ul li {
+    padding: 15px;
+}
+
+.menu ul li a:hover {
+    color: #fcc330;
+}
+
+.menu-logo {
+    text-align: center;
+}
+
+.menu-pesquisa {
+    display: flex;
+}
+
+.menu-pesquisa input {
+    background: transparent;
+    border: 3px solid #fcc330;
+    padding: 8px;
+}
+
+.botao-pesq {
+    background: transparent;
+    cursor: pointer;
+}
+
+.icone-menu {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    
+}
+
+.icone-menu img {
+    padding-right: 30px;
+}
+
+
+/* area-promo */
+
+.area-promo-bg {
+    text-align: center;
+    width: 100%;
+    height: 230px;
+    color: white;
+    background: #fcc330;
+}
+
+.area-promo h3 {
+    padding-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 10px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .5px;
+}
+
+.area-promo h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.area-promo-menu ul {
+    padding-right: 540px;
+    padding-top: 20px;
+}
+
+.area-promo-menu ul li a {
+    float: right;
+    color: white;
+    margin-left: 38px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 3px solid violet;
+}
+
+.area-promo-menu ul li a:hover {
+    color: black;
+}
+
+/* BANNER PROMOÇÃO */
+
+.logo-promo {
+    margin-left: 1000px;
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.logo-promo p span {
+    -webkit-text-stroke-color: #fcc330;
+    -webkit-text-stroke-width: 3px;
+    font-size: 150px;
+}
+
+.banner-promocao-bg {
+    background-image: url('./img/home/bg1-home.jpg');
+    max-width: 100%;
+}
+
+
+/* ITEM-PRAVC*/
+
+.item-pravc-bg {
+    max-width: 100%;
+    background: whitesmoke;
+}
+
+.item-pravc-bg h2 {
+    font-size: 3rem;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.item-pravc-img {
+    display: flex;
+    padding-top: 70px;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.item-pravc-img p {
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 1px transparent;
+    text-align: center;
+    width: 244px;
+    height: 132px;
+}
+
+/* NOSSA-LOJA */
+
+.nossa-loja-bg {
+    width: 100%;
+    height: 1600px;
+    background: #000;
+    position: absolute;
+    background-image: url('./img/home/bg-alc-fundo-geral.svg');
+}
+
+.img-nossa-loja-1 {
+    z-index: 10px;
+    position: relative;
+    margin-left: 60px;
+    width: 630px;
+}
+
+.img-nossa-loja-2 {
+    z-index: 20px;
+    position: relative;
+    margin-left: 710px;
+    margin-top: -934px;
+    height: 533px;
+}
+
+.nossa-loja-text {
+    z-index: 30px;
+    position: relative;
+    border: 4px solid #fcc330;
+    font-size: 1.3rem;
+    width: 593px;
+    height: 383px;
+    text-align: center;
+    color: white;
+    margin-left: 710px;
+    margin-top: 20px;
+}
+
+.img-nossa-loja-3 {
+    z-index: 40px;
+    position: relative;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.btn-sobre {
+    z-index: 50px;
+    position: relative;
+    border: 3px solid #fcc330;
+    color: white;
+    margin-left: 650px;
+    margin-top: 60px;
+    color: white;
+    background: transparent;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn-sobre a {
+    color: #fcc330;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-sobre a:hover {
+    color: white;
+}

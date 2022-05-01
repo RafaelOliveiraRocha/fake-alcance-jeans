@@ -1,0 +1,37 @@
+.localizacao {
+    height: 800px;
+}
+
+.localizacao h2 {
+    color: #fcc330;
+    max-width: 342px;
+    border-bottom: 3px solid violet;
+    margin-left: 520px;
+    margin-top: 90px;
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.localizacao p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-left: 200px;
+}
+
+.localizacao a img {
+    margin-left: 200px;
+    margin-top: 40px;
+    position: absolute;
+    max-width: 100%;
+}
+
+.logo-localizacao {
+    position: relative;
+    z-index: 60px;
+    margin-left: 1000px;
+    margin-top: 80px;
+}
