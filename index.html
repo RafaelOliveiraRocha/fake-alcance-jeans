@@ -1,231 +1,137 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Alcance Jeans</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script>document.documentElement.className += ' js'</script>
-        <link rel="shortcut icon" href="favicon.ico">
-        <link rel="icon" type="image/png" sizes="256x233" href="./img/logo-alcance.ico">
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    </head>
-
-    <body>
-        <div class="promo-menu-bg">
-            <div class="promo-menu">
-                <nav>
-                    <div>
-                      <p>< Promoção 20% de desconto na primeira compra. Clique e confira<a href="colecao.html"> Detalhes ></a></p>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li><a data-modal="abrir" href="login.html">Log In</a></li>
-                            <li><a href="signup.html">Sign Up</a></li>
-                            <li><a href="lojas.html">Lojas & Serviços</a></li>
-                        </ul>
-                    </div>
-                </nav>    
-            </div>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alcance Jeans | Estudo independente</title>
+    <link rel="icon" href="img/logo-alcance.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="inicio">
+    <a class="pular-conteudo" href="#colecao">Ir para as peças</a>
+    <p class="aviso-estudo">Estudo independente de 2022, com a Alcance Jeans como referência visual. Site não oficial.</p>
+    <div class="promo-menu-bg">
+        <nav class="promo-menu" aria-label="Atalhos do estudo">
+            <p>Promoção de referência: 20% na primeira compra. <a href="#colecao">Conheça as peças</a></p>
+            <ul><li><a href="#sobre">Sobre o estudo</a></li><li><a href="#contato">Exemplos de contato</a></li></ul>
+        </nav>
+    </div>
+    <header class="menu-bg">
+        <nav class="menu" aria-label="Navegação principal">
+            <ul>
+                <li data-dropdown>
+                    <button type="button" data-dropdown-rev aria-expanded="false" aria-controls="menu-explorar">Explorar</button>
+                    <ul class="dropdown-menu" id="menu-explorar">
+                        <li><a href="#localizacao">Mapa e tooltip</a></li>
+                        <li><a href="#contato">Contadores</a></li>
+                        <li><a href="#sobre">Apresentação</a></li>
+                    </ul>
+                </li>
+                <li><a href="#colecao">Peças</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a class="menu-logo" href="#inicio" aria-label="Voltar ao início"><img src="img/home/logo-alcance.svg" alt="Alcance Jeans"></a>
+        <form class="menu-pesquisa" role="search">
+            <label class="sr-only" for="pesquisa">Buscar nas cinco peças do estudo</label>
+            <input type="search" name="busca" id="pesquisa" placeholder="Busque uma peça" autocomplete="off" aria-controls="lista-pecas">
+            <button type="submit" class="botao-pesq" aria-label="Buscar peças"><img src="img/home/lupa-pesq.svg" alt=""></button>
+            <button type="button" class="limpar-busca" hidden>Limpar</button>
+        </form>
+        <div class="icone-menu" aria-hidden="true">
+            <img src="img/home/coracao-like-menu.svg" alt="">
+            <img src="img/home/bag-menu.svg" alt="">
         </div>
-
-            <header class="menu-bg">
-                <div class="menu">
-                    <ul>
-                        <li data-dropdown>
-                            <a data-dropdown-rev href="revendedoras.html">Revendedoras</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="revendedoras.html">Peabiru(PR)</a></li>
-                                <li><a href="revendedoras.html/varjota">Varjota(CE)</a></li>
-                                <li><a href="revendedoras.html/goiana">Goiana(GO)</a></li>
-                                <li><a href="revendedoras.html/saopaulo">São Paulo(SP)</a></li>
-                                <li><a href="revendedoras.html">Outras</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="colecao.html">Coleção</a></li>
-                        <li><a href="provador.html">Provador</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                    </ul>
+    </header>
+    <main>
+        <section class="area-promo-bg" aria-labelledby="titulo-promocao">
+            <div class="area-promo">
+                <h3>Promoção especial</h3>
+                <h1 id="titulo-promocao">20% de desconto</h1>
+                <h2>Na sua primeira compra!</h2>
+                <p class="nota-referencia">Texto promocional usado como referência no estudo de 2022.</p>
+            </div>
+            <div class="area-promo-menu"><a href="#colecao">Ver peças</a><a href="#sobre">Conhecer o estudo</a></div>
+        </section>
+        <section class="banner-promocao-bg" aria-label="Composição visual do estudo">
+            <img src="img/home/bg1-home.jpg" alt="Look jeans usado no banner do estudo">
+            <div class="logo-promo">
+                <img src="img/home/log-alcance2.svg" alt="Alcance Jeans">
+                <p>Desconto de <span>20%</span></p>
+                <p class="nota-referencia">Referência histórica</p>
+            </div>
+        </section>
+        <section class="item-pravc-bg" id="colecao" aria-labelledby="titulo-colecao">
+            <h2 id="titulo-colecao">Looks do momento para você</h2>
+            <p class="intro-colecao">Cinco peças da referência original. Fotos, descrições e valores do estudo de 2022.</p>
+            <p id="busca-status" role="status" aria-live="polite">5 peças do estudo</p>
+            <p id="sem-resultados" hidden>Nenhuma peça corresponde à busca. Use Limpar para ver todas.</p>
+            <div class="item-pravc-img" id="lista-pecas">
+                <article class="peca" id="peca-1">
+                    <button class="peca-abrir" type="button" data-modal="abrir" data-peca="peca-1" aria-label="Ver detalhes da calça destroyed média" aria-haspopup="dialog"><img src="img/home/para-voce1.jpg" alt="Calça jeans de lavagem destroyed média"></button>
+                    <div class="peca-descricao"><h3>Calça destroyed média</h3><p>Lavagem destroyed média. Cintura alta.</p><p>Tamanhos do 34 ao 44.</p><p class="peca-preco">R$ 289,90</p><p class="registro-peca">Registro original: em estoque.</p></div>
+                    <button class="detalhes" type="button" data-modal="abrir" data-peca="peca-1" aria-haspopup="dialog">Ver detalhes<span class="sr-only"> da calça destroyed média</span></button>
+                </article>
+                <article class="peca" id="peca-2">
+                    <button class="peca-abrir" type="button" data-modal="abrir" data-peca="peca-2" aria-label="Ver detalhes da calça boca de sino" aria-haspopup="dialog"><img src="img/home/para-voce2.jpg" alt="Calça jeans de boca de sino"></button>
+                    <div class="peca-descricao"><h3>Calça boca de sino</h3><p>Lavagem destroyed média para escura. Cintura alta e boca de sino.</p><p>Tamanhos do 34 ao 44.</p><p class="peca-preco">R$ 268,00</p><p class="registro-peca">Registro original: em estoque.</p></div>
+                    <button class="detalhes" type="button" data-modal="abrir" data-peca="peca-2" aria-haspopup="dialog">Ver detalhes<span class="sr-only"> da calça boca de sino</span></button>
+                </article>
+                <article class="peca" id="peca-3">
+                    <button class="peca-abrir" type="button" data-modal="abrir" data-peca="peca-3" aria-label="Ver detalhes do conjunto jeans escuro" aria-haspopup="dialog"><img src="img/home/para-voce3.jpg" alt="Conjunto de calça e jaqueta jeans escuro"></button>
+                    <div class="peca-descricao"><h3>Conjunto jeans escuro</h3><p>Lavagem destroyed escura, com calça e jaqueta.</p><p>Calça do 34 ao 44; jaqueta P, M e G.</p><p class="peca-preco">R$ 328,00 pelo conjunto</p></div>
+                    <button class="detalhes" type="button" data-modal="abrir" data-peca="peca-3" aria-haspopup="dialog">Ver detalhes<span class="sr-only"> do conjunto jeans escuro</span></button>
+                </article>
+                <article class="peca" id="peca-4">
+                    <button class="peca-abrir" type="button" data-modal="abrir" data-peca="peca-4" aria-label="Ver detalhes do short jeans médio" aria-haspopup="dialog"><img src="img/home/para-voce4.jpg" alt="Short jeans de lavagem média"></button>
+                    <div class="peca-descricao"><h3>Short jeans médio</h3><p>Short cego. Lavagem destroyed média.</p><p>Tamanhos do 34 ao 44.</p><p class="peca-preco">R$ 144,00</p><p class="registro-peca">Registro original: em estoque.</p></div>
+                    <button class="detalhes" type="button" data-modal="abrir" data-peca="peca-4" aria-haspopup="dialog">Ver detalhes<span class="sr-only"> do short jeans médio</span></button>
+                </article>
+                <article class="peca" id="peca-5">
+                    <button class="peca-abrir" type="button" data-modal="abrir" data-peca="peca-5" aria-label="Ver detalhes da calça branca" aria-haspopup="dialog"><img src="img/home/para-voce5.jpg" alt="Calça em branco total"></button>
+                    <div class="peca-descricao"><h3>Calça branca</h3><p>Branco total. Alvejamento eco.</p><p>Tamanhos do 34 ao 44.</p><p class="peca-preco">R$ 188,00</p><p class="registro-peca">Registro original: em estoque.</p></div>
+                    <button class="detalhes" type="button" data-modal="abrir" data-peca="peca-5" aria-haspopup="dialog">Ver detalhes<span class="sr-only"> da calça branca</span></button>
+                </article>
+            </div>
+        </section>
+        <section class="nossa-loja-bg" id="sobre" aria-labelledby="titulo-sobre">
+            <div class="sobre-grid">
+                <div class="img-nossa-loja-1"><img src="img/home/bg1-apresentacao.jpg" alt="Imagem da referência visual de jeans"></div>
+                <div class="img-nossa-loja-2"><img src="img/home/bg2-apresentacao.jpg" alt="Composição da referência visual da marca"></div>
+                <div class="nossa-loja-text"><h2 id="titulo-sobre">Um estudo, uma referência</h2><p>Esta página foi criada manualmente por Rafael Oliveira Rocha, no início do aprendizado em desenvolvimento web, em maio de 2022.</p><p>A Alcance Jeans foi a referência para as imagens, os dados das peças e a identidade visual. A iniciativa é independente e esta página não é um site oficial da marca.</p><p>O estudo combina HTML, CSS e JavaScript para explorar apresentação, navegação e interações na própria página.</p></div>
+                <div class="img-nossa-loja-3"><img src="img/home/bg3-apresentacao.jpg" alt="Imagem de apresentação usada no estudo"></div>
+            </div>
+        </section>
+        <section class="localizacao" id="localizacao" aria-labelledby="titulo-mapa">
+            <div><h2 id="titulo-mapa">Mapa do estudo</h2><p>Uma imagem local da referência original, usada para experimentar tooltip. Passe o mouse ou use o teclado para ler a descrição.</p>
+                <button class="mapa" type="button" data-tooltip data-tooltip-text="Imagem de referência do estudo de 2022, sem navegação para serviços de mapas." aria-label="Mostrar informação sobre o mapa"><img src="img/home/mapa-localizacao.jpg" alt="Imagem do mapa usado como referência no estudo"></button>
+            </div>
+            <img class="logo-localizacao" src="img/home/log-alcance2.svg" alt="Alcance Jeans">
+        </section>
+        <section class="contato-container" id="contato" data-scroll aria-labelledby="titulo-contato">
+            <h2 id="titulo-contato">Contato demonstrativo</h2>
+            <p>Exemplos neutros para compor a página, sem envio ou atendimento.</p>
+            <div class="contato-grid">
+                <div>
+                    <ul class="meios-contato"><li>Telefone: (00) 00000-0000, fictício</li><li>E-mail: contato@example.invalid</li><li class="funcionamento" data-semana="1,2,3,4,5" data-horario="8,18">Exemplo de horário: seg a sex, 8h às 18h.<span data-status-horario></span></li></ul>
+                    <p class="nota-referencia">O indicador usa o relógio do navegador para ilustrar o horário.</p>
+                    <p class="rede">Contadores ilustrativos</p>
+                    <ul class="redes-sociais" aria-label="Ícones de referência das redes"><li><img src="img/home/vetor-redes-insta.svg" alt="Instagram"></li><li><img src="img/home/vetor-redes-face.svg" alt="Facebook"></li><li><img src="img/home/vetor-redes-wpp.svg" alt="WhatsApp"></li><li><img src="img/home/vetor-redes-tt.svg" alt="TikTok"></li></ul>
+                    <ul class="numero-seguidores" data-anime="scroll" aria-label="Números fictícios para demonstrar a animação"><li data-numero>120</li><li data-numero>80</li><li data-numero>150</li><li data-numero>35</li></ul>
+                    <p class="nota-referencia">Valores fictícios, sem consulta a redes sociais.</p>
                 </div>
-
-                <div class=menu-logo>
-                    <a href="index.html"><img src="./img/home/logo-alcance.svg" alt="Alcance"></a>
-                </div>
-
-                <div class="menu-pesquisa">
-                    <label for="pesquisa"><a href="x.html"></a></label>
-                    <input  type="text" placeholder="descubra novos produtos" for="pesquisa" id="pesquisa">
-                    <button class="botao-pesq"><img src="./img/home/lupa-pesq.svg" alt="pesquisa"></button>
-                </div>
-
-                <div class="icone-menu">
-                    <img src="./img/home/coracao-like-menu.svg" alt="like">
-                    <img src="./img/home/bag-menu.svg" alt="bag">
-                </div>
-            </header>
-
-            <section class="area-promo-bg">
-                <div class="area-promo">
-                    <h3>Promoção Especial</h3>
-                    <h1>20% de desconto</h1>
-                    <h2>Na sua primeira compra!!</h2>
-                </div>
-                <div class="area-promo-menu">
-                    <ul>
-                        <li><a href="colecao.html"> >>Coleção<<</a></li>
-                        <li><a href="provador.html"> >>Provador<<</a></li>
-                    </ul>
-                </div>
-
-            </section>
-
-            <section>
-
-                <div class="logo-promo">
-                    <img src="./img/home/log-alcance2.svg" alt="alcance">
-                    <p>Desconto de <span>20%</span></p>
-                    <p>Na sua primeira compra!!!</p>
-                </div>
-
-                <div class="banner-promocao-bg">
-                    <img src="./img/home/bg1-home.jpg" alt="promocao">
-                </div>
-            </section>
-               
-
-            <section class=item-pravc-bg>
-                <h2>Looks do momento para você</h2>
-                <div class="item-pravc-img">
-                    <div>
-                        <a href="colecao.html"><img src="./img/home/para-voce1.jpg" alt="look"></a>
-                        <p>Calça lavagem destroyed médio. Cintura alta.
-                            Tamanhos do 34 ao 44.
-                            R$289,90.
-                            Em estoque.
-                        </p>
-                    </div>
-                    <div>
-                        <a href="colecao.html"><img src="./img/home/para-voce2.jpg" alt="look"></a>
-                    <p>Calça lavagem destroyed médio p/ escuro. Cintura alta e       boca de sino.
-                        Tamanhos do 34 ao 44.
-                        R$268.
-                        Em estoque.
-                    </p>
-                    </div>
-                  
-                    <div>
-                        <a href="colecao.html"><img src="./img/home/para-voce3.jpg" alt="look"></a>
-                        <p>Conjunto em lavagem destroyed escuro. 
-                            Tamanhos do 34 ao 44 p/ calça e P, M, G para jaqueta. R$328(conjunto)
-                        </p>
-                    </div>
-                    <div>
-                        <a href="colecao.html"><img src="./img/home/para-voce4.jpg" alt="look"></a>
-                        <p>Short cego. Lavagem destroyed médio. Tamanho do 34 ao 44.
-                            R$144.
-                            Em estoque.
-                        </p>
-                    </div>
-                    <div>
-                        <a href="colecao.html"><img src="./img/home/para-voce5.jpg" alt="look"></a>
-                        <p>Calça em branco total. Alvejamento eco.
-                            tamanhos 34 ao 44.
-                            R$188.
-                            Em estoque.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="nossa-loja-bg">
-                <div class="plano-fundo-bg">
-                    <img src="./img/home/bg-alc-fundo-geral.svg" alt="alcance">
-                </div>
-            </section>
-
-            <section>
-                <div class="img-nossa-loja-1"><img src="./img/home/bg1-apresentacao.jpg" alt="alcance"></div>
-                <div class="img-nossa-loja-2"><img src="./img/home/bg2-apresentacao.jpg" alt="alcance"></div>
-                <div class="nossa-loja-text"> Venha conhecer um pouco mais do nosso DNA.<br>
-                    Além do sucesso que já fazemos no Instagram,<br> graças a
-                    VOCÊS e agora aqui, com nosso site<br> inteiramente a disposição na palma da sua mão, também contamos com diversos pontos físicos para melhor atender você nosso cliente.
-                    Em breve estaremos com uma nova<br> coleção vinda direta da nossa sede em São João Nepomuceno - MG, onde iremos levar vocês até os bastidores de todas nossas criações.
-                    Fiquem atentas em nossas redes para não perder uma só novidade.<br>
-                    Em breve faremos um ensaio na nossa fábrica toda repeginada. Demos<br>
-                    aquele upgrade e só estamos acabando de chegar as coisa no lugar.
-                    veeeeem muuuuuita coisa boa por aí.<br> 
-                </div>
-                <div class="img-nossa-loja-3"><img src="./img/home/bg3-apresentacao.jpg" alt="alcance"></div>
-                <button class="btn-sobre"><a href="sobre.html">Sobre</a></button>
-            </section>
-
-            <section class="localizacao">
-                <h2>Localização</h2>
-                <p>Veja onde achar nossa loja física na PoloMega para você ATACADISTA.
-                    Descontos e condições especiais.<br> Venha conhecer nosso novo espaço e
-                    ficar por dentro das tendências da moda dennim.
-                </p>
-
-                
-                    <a class="mapa" href="https://www.google.com.br/maps"><img data-tooltip aria-label="Rua Aimorés com a Ribeiro Lima"  src="./img/home/mapa-localizacao.jpg" alt="Mapa"></a>
-
-                <img class="logo-localizacao" src="./img/home/logo-alcance.svg" alt="alcance">
-                
-            </section>
-
-            <section class="contato-container" data-scroll>
-                <h2>Contato</h2>
-
-                <p>Entre em contato conosco através de algum de nossos meios e garanta
-                    já as coleções mais bombadas para<br> o seu closet ou sua loja. Nossa 
-                    equipe espera por você.
-                </p>
-
-                <ul class="meios-contato">
-                    <li>Tel: (11) 3538-8987</li>
-                    <li>Email: alcance@jeans.com</li>
-                    <li class="funcionamento" data-semana="1,2,3,4,5" data-horario="8,18">Seg à Sex das 8h às 18h</li>
-                </ul>
-
-                <p class="rede">redes sociais:</p>
-
-                <ul class="redes-sociais">
-                    <li><a href="https://www.instagram.com"><img src="./img/home/vetor-redes-insta.svg" alt="Instagram"></a></li>
-                    <li><a href="https://pt-br.facebook.com/"><img src="./img/home/vetor-redes-face.svg" alt="Facebook"></a></li>
-                    <li><a href="https://www.whatsapp.com/?lang=pt_br"><img src="./img/home/vetor-redes-wpp.svg" alt="Whatsapp"></a></li>
-                    <li><a href="https://www.tiktok.com/pt-BR"><img src="./img/home/vetor-redes-tt.svg" alt="tiktok"></a></li>
-                </ul>
-
-                <ul class="numero-seguidores" data-anime="scroll">
-                    <li data-numero>237015</li>
-                    <li data-numero>2328</li>
-                    <li data-numero>30296</li>
-                    <li data-numero>178965</li>
-                </ul>
-
-                <img src="./img/home/log-alcance-redes.svg" alt="alcance">
-
-            </section>
-
-            <footer>
-                <p>Alcance Jeans - Todos os direitos reservados - 2022</p>
-            </footer>
-
-            <section class="modal-container" data-modal="container">
-                <div class="modal">
-                    <button data-modal="fechar" class="fechar">X</button>
-                    <form action="">
-                        <label for="email">Email</label>
-                        <input type="text" for="email" id="email">
-                        <label for="senha">Senha</label>
-                        <input type="password" for="senha" id="senha">
-                        <button type="submit">Entrar</button>
-                    </form>
-                </div>
-            </section>
-
-         
-            <script type="module" src="js/script.js"></script>
-    </body>
+                <img class="logo-contato" src="img/home/log-alcance-redes.svg" alt="Alcance Jeans">
+            </div>
+        </section>
+    </main>
+    <footer><p>Referência visual: Alcance Jeans. Estudo independente de Rafael Oliveira Rocha, 2022.</p></footer>
+    <div class="modal-container" data-modal="container" hidden>
+        <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-describedby="modal-origem" tabindex="-1">
+            <button type="button" data-modal="fechar" class="fechar" aria-label="Fechar detalhes">×</button>
+            <div class="modal-conteudo"><img id="modal-imagem" alt=""><div><h2 id="modal-titulo">Detalhes da peça</h2><div id="modal-descricao"></div><p id="modal-origem">Fotos e informações de referência do estudo de 2022.</p></div></div>
+        </section>
+    </div>
+    <script type="module" src="js/script.js"></script>
+</body>
 </html>

@@ -1,15 +1,11 @@
 export default function iniciaFuncionamento() {
-
-    const funcionamento = document.querySelector('[data-semana]');
-    const diasSemana = funcionamento.dataset.semana.split(',').map(Number);
-    const horarioSemana = funcionamento.dataset.horario.split(',').map(Number);
-    const dataAgora = new Date();
-    const diaAgora = dataAgora.getDay();
-    const horarioAgora = dataAgora.getHours();
-    const semanaAberto = diasSemana.indexOf(diaAgora) !== -1;
-    const horarioAberto = (horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1]);
-
-    if(semanaAberto && horarioAberto) {
-        funcionamento.classList.add('aberto')
-    }
-};
+  const elemento = document.querySelector('[data-semana]');
+  if (!elemento) return;
+  const dias = elemento.dataset.semana.split(',').map(Number);
+  const horario = elemento.dataset.horario.split(',').map(Number);
+  const agora = new Date();
+  const dentro = dias.includes(agora.getDay()) && agora.getHours() >= horario[0] && agora.getHours() < horario[1];
+  elemento.classList.toggle('aberto', dentro);
+  const estado = elemento.querySelector('[data-status-horario]');
+  if (estado) estado.textContent = dentro ? 'Dentro do horário ilustrativo' : 'Fora do horário ilustrativo';
+}

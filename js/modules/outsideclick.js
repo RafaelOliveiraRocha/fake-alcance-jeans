@@ -1,20 +1,13 @@
-export default function outsideClick(element, events, callback) {
-    const html = document.documentElement;
-    const outside = 'data-outside'
-
-    if(!element.hasAttribute(outside)) {
-        events.forEach(userEvent => {
-            html.addEventListener(userEvent, handleOutsideClick)
-        })
-        element.setAttribute(outside, '')
+export default function outsideClick(elemento, eventos, callback) {
+  function remover() {
+    eventos.forEach(evento => document.removeEventListener(evento, aoClicarFora));
+  }
+  function aoClicarFora(event) {
+    if (!elemento.contains(event.target)) {
+      remover();
+      callback();
     }
-    function handleOutsideClick(event) {
-        if(!element.contains(event.target)){
-            element.removeAttribute(outside)
-            events.forEach(userEvent => {
-                html.removeEventListener(userEvent, handleOutsideClick)
-            })
-            callback();
-        }
-    }
+  }
+  eventos.forEach(evento => document.addEventListener(evento, aoClicarFora));
+  return remover;
 }

@@ -1,13 +1,1 @@
-footer {
-    margin-top: 460px;
-    display: block;
-    width: 100%;
-    height: 60px;
-    background: black;
-}
-
-footer p {
-    color: white;
-    margin-left: 250px;
-    padding: 20px;
-}
+footer { background: #111; color: #fff; padding: 1.5rem 1rem; text-align: center; font-size: .85rem; line-height: 1.7; }

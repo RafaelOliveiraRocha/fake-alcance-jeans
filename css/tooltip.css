@@ -1,13 +1,1 @@
-.tooltip {
-    position: absolute;
-    z-index: 2000;
-    background: rgba(0,0,0,.6);
-    box-shadow: 0 0 0 2px #fcc330, 0 0 0 6px rgba(0,0,0,.6);
-    padding: .5rem;
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: .875rem;
-    max-width: 150px;
-    border-radius: 2px;
-}
+.tooltip { position: absolute; z-index: 600; background: #202020; box-shadow: 0 0 0 2px #fcc330; padding: .7rem; color: #fff; font-size: .85rem; line-height: 1.5; width: max-content; max-width: min(240px, calc(100vw - 24px)); border-radius: 2px; pointer-events: none; }
